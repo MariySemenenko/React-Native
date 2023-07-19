@@ -12,7 +12,7 @@ import {
     ImageBackground,
   } from "react-native";
   
-  export const LoginScreen = () => {
+  export const LoginScreen = ({navigation}) => {
   
     return (
       <ImageBackground
@@ -38,14 +38,18 @@ import {
               <TouchableOpacity style={styles.btn}>
                 <Text style={styles.textBtn}>Увійти</Text>
               </TouchableOpacity>
+              <TouchableOpacity onPress={()=>navigation.navigate('RegistrationScreen')}>
               <Text style={styles.textLog}>
                 Немає акаунту?
+                </Text >
                 <Text
                   style={styles.textLogin}
                 >
                   Зареєструватися
                 </Text>
-              </Text>
+
+              
+              </TouchableOpacity>
             </View>
           </KeyboardAvoidingView>
         </TouchableWithoutFeedback>

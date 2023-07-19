@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export const RegistrationScreen = () => {
+export const RegistrationScreen = ({navigation}) => {
   return (
     <ImageBackground
       source={require("./images/photo-bg.png")}
@@ -46,10 +46,13 @@ export const RegistrationScreen = () => {
           <TouchableOpacity style={styles.btn}>
             <Text style={styles.textBtn}>Зареєструватися</Text>
           </TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.navigate('LoginScreen')}>
           <Text style={styles.textLogin}>
             Вже є акаунт?
+            </Text>
             <Text style={styles.textLogin}>Увійти</Text>
-          </Text>
+          
+          </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
     </ImageBackground>
