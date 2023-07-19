@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { LoginScreen } from './Screens/LoginScreen';
+//import { RegistrationScreen } from './Screens/RegistrationScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
      
-      <Text style={{color: 'green', fontSize: 30}}>I like react native :) </Text>
+      
       <StatusBar style="auto" />
+
+      <LoginScreen />
+
     </View>
+    
   );
 }
 
